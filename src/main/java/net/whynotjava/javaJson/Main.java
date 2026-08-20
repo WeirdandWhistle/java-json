@@ -13,9 +13,14 @@ public class Main {
             String tmp = read.readAllAsString();
             List<String> tokens = Tokenizer.tokenize(tmp);
 
-            for(int i = 0; i<tokens.size(); i++){
-                System.out.println("token: '"+tokens.get(i)+"'");
-            }
+            // for(int i = 0; i<tokens.size(); i++){
+            //     System.out.println("token: '"+tokens.get(i)+"'");
+            // }
+
+            JsonNode node = Parser.parse(tokens);
+
+            System.out.println(node.getArray());
+
         } catch (Exception e) {
             e.printStackTrace();
         }

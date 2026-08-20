@@ -64,7 +64,7 @@ public class Tokenizer {
                 break;
             out += String.valueOf(curChar);
         }
-        return new ParsedTokenObject(out, offset);
+        return new ParsedTokenObject(out, offset-1);
     }
     private static boolean contains(char arr[], char v){
         for(int i = 0; i<arr.length; i++){
@@ -86,7 +86,7 @@ public class Tokenizer {
             if(curChar == '"' && prevChar != '\\')
                 break;
 
-            prevChar = str.charAt(offset);
+            prevChar = curChar;
         }
         return new ParsedTokenObject(out, offset);
     }
