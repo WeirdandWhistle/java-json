@@ -1,0 +1,22 @@
+{
+    "test":"nerd",
+    "you":{
+        "are":[
+            "a",
+            "weird",
+            "o"
+        ]
+    },
+    "best":{"tight":"turns","might":"be","hard":false},
+    "arrayOfTestTypes":[
+        -1,
+        1,
+        null          
+            ,
+        true    ,
+        false ,
+        -24895.240857
+        ,
+        1.567890E-6
+    ]
+}
