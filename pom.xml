@@ -62,4 +62,11 @@
             moved to parent pom) -->
         </pluginManagement>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/WeirdandWhistle/java-json</url>
+        </repository>
+    </distributionManagement>
 </project>

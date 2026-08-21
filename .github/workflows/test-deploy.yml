@@ -1,0 +1,43 @@
+name: Run juint tests & deploy
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo code
+        uses: actions/checkout@v6
+      - name: setup java
+        uses: actions/setup-java@v5
+        with: 
+          java-version: 25
+          distribution: 'temurin'
+          cache: maven
+      - run: mvn test
+  deploy:
+    name: Publibsh
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v6
+
+      - name: set up maven/jdk
+        uses: actions/setup-java@v5
+        with: 
+          java-version: 25
+          distribution: 'temurin'
+          cache: 'maven'
+          server-id: github
+          server-username: ${{ github.actor }}
+          server-password: ${{ github.GITHUB_TOKEN }}
+      
+      - name: deploy
+        run: mvn deploy
+        env:
+          GITHUB_TOKEN ${{ secrets.GITHUB_TOKEN }}
+       
