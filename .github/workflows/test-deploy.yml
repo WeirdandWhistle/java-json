@@ -32,12 +32,12 @@ jobs:
           java-version: 25
           distribution: 'temurin'
           cache: 'maven'
-          server-id: github
-          server-username: ${{ github.actor }}
-          server-password: ${{ secrets.GITHUB_TOKEN }}
+          # server-id: github
+          # server-username: ${{ github.actor }}
+          # server-password: ${{ secrets.GITHUB_TOKEN }}
       
       - name: deploy
-        run: mvn deploy
+        run: mvn --batch-mode deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
        
