@@ -6,4 +6,4 @@ jobs:
     steps:
       - name: checkout repo code
         uses: actions/checkout@v6
-      - runs: mvn test
+      - run: mvn test
