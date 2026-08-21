@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo code
-        users: actions/checkout@v6
+        uses: actions/checkout@v6
       - runs: mvn test
