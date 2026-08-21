@@ -17,9 +17,19 @@ public class Main {
             //     System.out.println("token: '"+tokens.get(i)+"'");
             // }
 
-            JsonNode node = Parser.parse(tokens);
+            // JsonNode node = Parser.parse(tokens);
 
-            System.out.println(node.getArray());
+            // System.out.println(node.getArray());
+
+            JsonNode node = new JsonNode(true);
+            node.addIndex(5);
+            node.addIndex(4);
+            node.addIndex(3);
+            node.addIndex(2);
+            node.addIndex(1);
+            node.addIndex("boom!");
+            // node.set("foo", "bar");
+            System.out.println(node.toString());
 
         } catch (Exception e) {
             e.printStackTrace();
