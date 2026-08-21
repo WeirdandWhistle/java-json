@@ -2,9 +2,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>net.whynotjava.java-json</groupId>
+    <groupId>net.whynotjava</groupId>
     <artifactId>java-json</artifactId>
-    <version>1.0</version>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
     <name>java-json</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -41,8 +42,8 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
             </plugin>
-            <plugin>
-                <!-- Build an executable JAR -->
+            <!-- <plugin>
+                // Build an executable JAR
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.1.0</version>
@@ -55,7 +56,7 @@
                         </manifest>
                     </archive>
                 </configuration>
-            </plugin>
+            </plugin> -->
         </plugins>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be
             moved to parent pom) -->

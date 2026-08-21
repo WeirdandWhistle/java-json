@@ -9,7 +9,7 @@ public class Parser {
     public static JsonNode parse(String str){
         return parse(Tokenizer.tokenize(str));
     }
-    public static JsonNode parse(List<String> tokens){
+    private static JsonNode parse(List<String> tokens){
         String type = getTokenType(tokens.get(0));
         // System.out.println(tokens.get(0) + " is of type " + type);
         JsonNode node = null;

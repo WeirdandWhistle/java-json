@@ -3,10 +3,8 @@ package net.whynotjava.javaJson;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.management.RuntimeErrorException;
-
-public class Tokenizer {
-    public static List<String> tokenize(String str){
+class Tokenizer {
+    static List<String> tokenize(String str){
         List<String> tokens = new ArrayList<>();
         str = str.trim();
         while(str.length() > 0){
